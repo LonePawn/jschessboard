@@ -395,12 +395,16 @@ return {
 var Square = function(){
 return {
   name: null,
+  rank: null,
+  file: null,
   piece: null,
   board: null,
 
   init: function(board, name){
     this.board = board;
     this.name  = name;
+    this.file  = name[0];
+    this.rank  = parseInt(name[1]);
     return this;
   },
 
