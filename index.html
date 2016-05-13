@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <!-- You need the charset to be UTF-8 so that the pieces display properly -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>JSChess Test</title>
+    <!-- You don't need to include anything except the jschess.js file -->
+    <script type='text/javascript' src='lib/piece.js'></script>
+    <script type='text/javascript' src='lib/square.js'></script>
+    <script type='text/javascript' src='lib/board.js'></script>
+    <style type="text/css" media="all">
+      body{
+        background-color: #333; 
+      }
+    </style>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/chess" type="text/css"/>
+  </head>
+  <body>
+    <!-- Place a canvas element wherever you would like your chess board(s) to render.  Remember to give each canvas a unique ID! -->
+    <canvas id='board'></canvas>
+    <script type='text/javascript'>
+      board   = Board().init('board', {coordinates: 'true', white_piece_color: 'white'});
+      board.draw();
+    </script>
+  </body>
+</html>
