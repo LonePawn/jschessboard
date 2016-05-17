@@ -8,10 +8,12 @@
     <script type='text/javascript' src='lib/piece.js'></script>
     <script type='text/javascript' src='lib/square.js'></script>
     <script type='text/javascript' src='lib/board.js'></script>
+    <script type='text/javascript' src='vendor/clickResponder.js'></script>
     <style type="text/css" media="all">
       body{
-        background-color: #333; 
+        background-color: #fff; 
       }
+
     </style>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/chess" type="text/css"/>
   </head>
@@ -19,8 +21,9 @@
     <!-- Place a canvas element wherever you would like your chess board(s) to render.  Remember to give each canvas a unique ID! -->
     <canvas id='board'></canvas>
     <script type='text/javascript'>
-      board   = Board().init('board', {coordinates: 'true', white_piece_color: 'white'});
+      board   = Board().init('board', {coordinates: true});
       board.draw();
+      ClickResponder().init('board', board);
     </script>
   </body>
 </html>
