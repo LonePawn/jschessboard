@@ -2,8 +2,7 @@
 
 JSChessboard is a javascript library for creating and rendering interactive chess boards on your web site. It is written in HTML 5 and vanilla javascript. No external resources are necessary to get started -- you don't even need CSS or images.
 
-It's worth mentioning that when we say "interactive" we mean "programatically
-interactive". This is not a chess game, and out of the box, it is only possible to interact with the board via javascript method calls. The idea is that interested developers can take this library and use it as a basis for creating their own web-based chess applications. Our hope is that by providing a simple means of rendering a board and pieces, and allowing developers to easily place and move pieces around the board, we'll cut down some of the tedium and allow them to get to coding the real guts of their idea.
+It's worth mentioning that when we say "interactive" we mean "programatically interactive". This is not a chess game, and out of the box, it is only possible to interact with the board via javascript method calls. The idea is that interested developers can take this library and use it as a basis for creating their own web-based chess applications. Our hope is that by providing a simple means of rendering a board and pieces, and allowing developers to easily place and move pieces around the board, we'll cut down some of the tedium and allow them to get to coding the real guts of their idea.
 
 ### Features
 
@@ -101,6 +100,11 @@ board.setPiece('K', 'white', 'e4');
 board.setPiece('N', 'black', 'c6');
 ```
 Keep in mind that after you've set your pieces, you need to call the `draw` method in order to update the visual state of the board.
+
+#### Moving Pieces By Clicking On The Board
+
+Despite the fact that I didn't want to pollute the base library with methods for handling click-based interaction, it's actually pretty straightforward to get an (extremely basic), implementation going. I've provided an example in the
+`vendor` directory and included it in the sample `index.html` file as well.
 
 
 ### Requests and Contributions
